@@ -1,0 +1,36 @@
+TASK 8 – PLAN THE ALGORITHM
+
+Algorithm: Milk Payment Calculator
+
+1. Pseudocode
+
+BEGIN
+    SET base_rate = 30.00
+    SET fat_step_value = 0.40
+    SET snf_step_value = 0.30
+    SET ten_day_total = 0.00
+
+    FOR each milk entry
+        READ litres, fat, snf
+
+        IF litres <= 0 OR fat < 2.0 OR fat > 7.0
+            DISPLAY "Invalid entry"
+        ELSE
+            CALCULATE fat_steps = ROUND((fat - 3.5) / 0.1)
+            CALCULATE snf_steps = ROUND((snf - 8.5) / 0.1)
+
+            CALCULATE rate =
+                base_rate + fat_steps * fat_step_value
+                + snf_steps * snf_step_value
+
+            CALCULATE payment = litres * rate
+            ADD payment TO ten_day_total
+
+            DISPLAY rate and payment
+        END IF
+    END FOR
+
+    DISPLAY ten_day_total
+END
+
+Note: This is a basic pseudocode draft. The final program should also validate SNF limits and reject non-numeric input.

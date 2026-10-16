@@ -1,0 +1,21 @@
+TASK 8 – HAND TRACE TABLE
+
+Entry| Litres| Fat %| SNF %| Rate (Rs.)| Payment (Rs.)
+1| 10| 3.5| 8.5| 30.00| 300.00
+2| 8.5| 4.2| 8.7| 33.40| 283.90
+3| 12| 3.1| 8.3| 27.80| 333.60
+Total| | | | | 917.50
+
+Calculation:
+
+- Entry 1: (10 \times 30.00 = 300.00)
+- Entry 2: (8.5 \times 33.40 = 283.90)
+- Entry 3: (12 \times 27.80 = 333.60)
+
+Ten-day total: Rs. 917.50
+
+Complexity analysis:
+
+- Time complexity: (O(n)), because each entry is processed once.
+- Space complexity: (O(1)) when maintaining only a running total.
+- A list requires (O(n)) extra space if all entries must be stored for later use.

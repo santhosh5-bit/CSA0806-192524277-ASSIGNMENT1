@@ -1,0 +1,69 @@
+# TASK 1 – Understand the Problem and Identify the Data
+
+## 1. Objective
+
+The objective is to calculate the correct payment for farmers supplying milk to the Ksheera Village Milk Producers' Co-operative.
+
+## 2. Input Values
+
+* Farmer ID: Identifies each farmer. It can be stored as a string.
+* Milk Quantity: The amount of milk supplied in litres. It can be stored as a float.
+* Fat Percentage: The fat content of milk. It can be stored as a float.
+* SNF Percentage: The solids-not-fat content. It can be stored as a float.
+* Shift: Identifies the morning or evening collection. It can be stored as a string.
+
+## 3. Output Values
+
+* Rate per litre: The calculated price for one litre of milk.
+* Payment amount: The total amount payable for one entry.
+* Ten-day total: The total payment for a farmer over ten days.
+
+## 4. Constants
+
+* BASE_RATE = 30.00
+* STANDARD_FAT = 3.5
+* STANDARD_SNF = 8.5
+* FAT_STEP_VALUE = 0.40
+* SNF_STEP_VALUE = 0.30
+
+These values should be named constants because they represent the standard rates. If the rates change, they can be updated in one place.
+
+## 5. Data Types
+
+* Integer: Used for whole-number values such as the number of entries.
+* Float: Used for milk quantity and fat/SNF percentages.
+* String: Used for farmer ID and shift.
+* Decimal: Recommended for accurate monetary calculations.
+
+## 6. Validation Rules
+
+* Milk quantity must not be negative.
+* Fat percentage must be between 2.0% and 7.0%.
+* SNF percentage must be validated according to the accepted range configured by the co-operative.
+* Farmer ID must not be empty.
+* Shift must be either morning or evening.
+* The payment amount must be rounded to two decimal places.
+
+## 7. Assumptions
+
+* The base rate is ₹30.00 per litre.
+* Standard fat is 3.5%.
+* Standard SNF is 8.5%.
+* Every 0.1% fat difference changes the rate by ₹0.40.
+* Every 0.1% SNF difference changes the rate by ₹0.30.
+* Payments are calculated for each entry and accumulated over ten days.
+* The final monetary amounts must be accurate to the nearest paisa.
+
+## 8. Alternative Concept and Complexity Analysis
+
+If separate variables are used for every farmer, the program becomes difficult to maintain as the number of farmers increases.
+
+Using a list or tuple for each entry makes the program easier to process using loops.
+
+For n entries:
+
+* Processing time: O(n).
+* Storage for all entries: O(n).
+* Running-total approach: O(1) additional storage for the total, excluding the current entry.
+
+Therefore, lists or tuples are more suitable when individual farmer records must be retained.

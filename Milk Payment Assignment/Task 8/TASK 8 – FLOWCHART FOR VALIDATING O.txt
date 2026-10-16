@@ -1,0 +1,33 @@
+TASK 8 – FLOWCHART FOR VALIDATING ONE ENTRY
+
+          START
+            |
+            v
+    Read litres, fat, SNF
+            |
+            v
+    Are inputs valid numbers?
+         /       \
+       No         Yes
+       |           |
+       v           v
+ Display Error   Check limits
+       |           |
+       |           v
+       |    litres > 0 and
+       |    2.0 <= fat <= 7.0
+       |           |
+       |       /       \
+       |     No         Yes
+       |     |           |
+       |     v           v
+       |  Display     Calculate
+       |  Invalid     rate and
+       |  Entry       payment
+       |     |           |
+       +-----+-----------+
+                  |
+                  v
+                 END
+
+Purpose: The flowchart checks the input before calculating the milk rate and payment.s
